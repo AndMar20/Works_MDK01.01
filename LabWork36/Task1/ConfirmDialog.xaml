@@ -1,0 +1,29 @@
+﻿<Window x:Class="Task1.ConfirmDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        Title="Потверждение" Height="150" Width="320"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.Column="1" Grid.ColumnSpan="2" Content="Вы хотите закрыть приложение?" VerticalAlignment="Center"/>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal"  >
+            <Button x:Name="YesButton" Content="Да" Height="25" Width="90" Margin="5" IsDefault="True" Click="YesButton_Click"/>
+            <Button Content="Нет" Height="25"  Width="90" IsCancel="True"/>
+        </StackPanel>
+        
+        <Image  Grid.Column="0" Grid.RowSpan="2" Source="/Images/Question.png"/>
+    </Grid>
+</Window>

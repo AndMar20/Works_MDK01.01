@@ -1,0 +1,65 @@
+﻿<Window x:Class="LabWorks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabWorks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <RadioButton x:Name="Task1RadioButton" GroupName="LabWorkGroup" Content="Task1" Checked="Task1RadioButton_Checked" Margin="10"/>
+                <WrapPanel>
+                    <Label Content="Цена:" Width="41"/>
+                    <TextBox x:Name="PriceTextBox" Width="50"/>
+                </WrapPanel>
+            </StackPanel>
+            <RadioButton x:Name="Task2RadioButton" GroupName="LabWorkGroup" Content="Task2" Checked="Task2RadioButton_Checked" Margin="10"/>
+            <StackPanel>
+                <RadioButton x:Name="Task3RadioButton" GroupName="LabWorkGroup" Content="Task3" Checked="Task3RadioButton_Checked" Margin="10"/>
+                <WrapPanel>
+                    <Label Content="Цена:" Width="51"/>
+                    <TextBox x:Name="Price3TextBox" Width="50"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Content="Жанр:" Width="51"/>
+                    <TextBox x:Name="GenreTextBox" Width="50"/>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel>
+                <RadioButton x:Name="Task4RadioButton" GroupName="LabWorkGroup" Content="Task4" Checked="Task4RadioButton_Checked" Margin="10"/>
+                <WrapPanel>
+                    <Label Content="ID:" Width="82"/>
+                    <TextBox x:Name="IdTextBox" Width="50"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Content="Новая цена:" Width="82"/>
+                    <TextBox x:Name="NewPriceTextBox" Width="50"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Content="Новое имя:" Width="82"/>
+                    <TextBox x:Name="NewNameTextBox" Width="50"/>
+                </WrapPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel>
+            <Label Content="Ввод комнады SQL:"/>
+            <TextBox x:Name="QueryTextBox" Height="150" Grid.Column="1" Margin="45,0,10,10" AcceptsReturn="True"/>
+        </StackPanel>
+
+        <Button x:Name="SendQueryButton" Content="Выполнить запрос" Click="SendQueryButton_Click" Margin="45,0,10,10" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="ConectionLabel" Content="Result:" Grid.Column="0"/>
+            <TextBox x:Name="ResultTextBox" Grid.Column="1" Height="100" Margin="0,0,10,10"/>
+        </Grid>
+
+        <DataGrid x:Name="TableDataGrid"/>
+    </StackPanel>
+</Window>

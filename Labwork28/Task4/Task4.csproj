@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\background.jpg" />
+    <None Remove="Image\bumblebee.ico" />
+    <None Remove="Image\error.ico" />
+    <None Remove="Image\favicon.ico" />
+    <None Remove="Image\galaxy.jpg" />
+    <None Remove="Image\plant.png" />
+    <None Remove="Image\zombie ball.png" />
+    <None Remove="Image\zombie.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\background.jpg" />
+    <Resource Include="Image\bumblebee.ico" />
+    <Resource Include="Image\error.ico" />
+    <Resource Include="Image\favicon.ico" />
+    <Resource Include="Image\galaxy.jpg" />
+    <Resource Include="Image\plant.png" />
+    <Resource Include="Image\zombie ball.png" />
+    <Resource Include="Image\zombie.png" />
+  </ItemGroup>
+
+</Project>
